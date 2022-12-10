@@ -1,4 +1,4 @@
-  import { useCallback } from "react";
+import { useCallback } from "react";
 import { AppProvider } from "@shopify/polaris";
 import { useNavigate } from "@shopify/app-bridge-react";
 import translations from "@shopify/polaris/locales/en.json";
@@ -14,14 +14,14 @@ function AppBridgeLink({ url, children, external, ...rest }) {
 
   if (external || IS_EXTERNAL_LINK_REGEX.test(url)) {
     return (
-      <a {...rest} href={url} target="_blank" rel="noopener noreferrer">
+      <a target="_blank" rel="noopener noreferrer" href={url} {...rest}>
         {children}
       </a>
     );
   }
 
   return (
-    <a {...rest} onClick={handleClick}>
+    <a onClick={handleClick} {...rest}>
       {children}
     </a>
   );

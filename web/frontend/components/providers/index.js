@@ -1,3 +1,3 @@
 export { AppBridgeProvider } from "./AppBridgeProvider";
-export { QueryProvider } from "./QueryProvider";
+export { GraphQLProvider } from "./GraphQLProvider";
 export { PolarisProvider } from "./PolarisProvider";
